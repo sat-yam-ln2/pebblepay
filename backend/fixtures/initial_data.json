@@ -1,0 +1,278 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "testuser",
+      "first_name": "Test",
+      "last_name": "User",
+      "email": "testuser@example.com",
+      "password": "pbkdf2_sha256$720000$WEvYeW8XN9L5X8x0RNr2H8$Xf+I2VG3vxVT0bVs/ry84aBKVmHY9AQKs3cYOKBK+OU=",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-09-23T12:00:00Z"
+    }
+  },
+  {
+    "model": "authentication.profile",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "phone_number": "555-123-4567",
+      "company_name": "Sample Business",
+      "business_type": "retail",
+      "subscription_plan": "premium",
+      "date_created": "2025-09-23T12:00:00Z",
+      "date_updated": "2025-09-23T12:00:00Z"
+    }
+  },
+  {
+    "model": "devices.feature",
+    "pk": 1,
+    "fields": {
+      "name": "Contactless Payments",
+      "description": "Support for NFC contactless payments",
+      "icon": "contactless"
+    }
+  },
+  {
+    "model": "devices.feature",
+    "pk": 2,
+    "fields": {
+      "name": "Receipt Printing",
+      "description": "Built-in thermal receipt printer",
+      "icon": "print"
+    }
+  },
+  {
+    "model": "devices.feature",
+    "pk": 3,
+    "fields": {
+      "name": "Battery Powered",
+      "description": "Rechargeable battery for mobile use",
+      "icon": "battery"
+    }
+  },
+  {
+    "model": "devices.device",
+    "pk": 1,
+    "fields": {
+      "name": "PebblePay Mini",
+      "slug": "pebblepay-mini",
+      "model_type": "mini",
+      "price": "149.99",
+      "description": "Compact POS device for small businesses. Portable and easy to use.",
+      "specifications": {
+        "screen": "5-inch touch display",
+        "processor": "Quad-core 1.5GHz",
+        "connectivity": ["WiFi", "Bluetooth"],
+        "battery_life": "12 hours"
+      },
+      "is_available": true,
+      "created_at": "2025-09-23T12:00:00Z",
+      "updated_at": "2025-09-23T12:00:00Z",
+      "features": [1, 3]
+    }
+  },
+  {
+    "model": "devices.device",
+    "pk": 2,
+    "fields": {
+      "name": "PebblePay Flex",
+      "slug": "pebblepay-flex",
+      "model_type": "flex",
+      "price": "299.99",
+      "description": "Versatile POS solution with advanced capabilities for medium-sized businesses.",
+      "specifications": {
+        "screen": "8-inch HD touch display",
+        "processor": "Octa-core 2.0GHz",
+        "connectivity": ["WiFi", "Bluetooth", "Ethernet"],
+        "battery_life": "10 hours"
+      },
+      "is_available": true,
+      "created_at": "2025-09-23T12:00:00Z",
+      "updated_at": "2025-09-23T12:00:00Z",
+      "features": [1, 2, 3]
+    }
+  },
+  {
+    "model": "marketplace.category",
+    "pk": 1,
+    "fields": {
+      "name": "Point of Sale",
+      "slug": "point-of-sale",
+      "description": "Applications for sales and payment processing",
+      "icon": "cash-register"
+    }
+  },
+  {
+    "model": "marketplace.category",
+    "pk": 2,
+    "fields": {
+      "name": "Inventory Management",
+      "slug": "inventory-management",
+      "description": "Applications for tracking and managing inventory",
+      "icon": "box"
+    }
+  },
+  {
+    "model": "marketplace.app",
+    "pk": 1,
+    "fields": {
+      "name": "PebblePOS",
+      "slug": "pebble-pos",
+      "description": "Complete point of sale solution for retail businesses",
+      "category": 1,
+      "developer": "PebblePay",
+      "version": "1.0.0",
+      "price": "0.00",
+      "rating": "4.5",
+      "downloads_count": 1250,
+      "screenshots": [
+        "/media/apps/screenshots/pebblepos_1.jpg",
+        "/media/apps/screenshots/pebblepos_2.jpg"
+      ],
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2025-09-23T12:00:00Z",
+      "updated_at": "2025-09-23T12:00:00Z"
+    }
+  },
+  {
+    "model": "marketplace.app",
+    "pk": 2,
+    "fields": {
+      "name": "Inventory Pro",
+      "slug": "inventory-pro",
+      "description": "Advanced inventory tracking with barcode scanning",
+      "category": 2,
+      "developer": "Business Solutions Inc.",
+      "version": "2.1.0",
+      "price": "9.99",
+      "rating": "4.2",
+      "downloads_count": 870,
+      "screenshots": [
+        "/media/apps/screenshots/inventory_pro_1.jpg",
+        "/media/apps/screenshots/inventory_pro_2.jpg"
+      ],
+      "is_featured": false,
+      "is_active": true,
+      "created_at": "2025-09-23T12:00:00Z",
+      "updated_at": "2025-09-23T12:00:00Z"
+    }
+  },
+  {
+    "model": "orders.customer",
+    "pk": 1,
+    "fields": {
+      "name": "Guest Customer",
+      "email": "guest@example.com",
+      "phone": "555-987-6543",
+      "address": "123 Main St, Anytown, USA",
+      "created_at": "2025-09-23T12:00:00Z"
+    }
+  },
+  {
+    "model": "inventory.category",
+    "pk": 1,
+    "fields": {
+      "name": "Hardware Accessories",
+      "slug": "hardware-accessories",
+      "description": "Accessories for PebblePay devices",
+      "is_active": true
+    }
+  },
+  {
+    "model": "inventory.product",
+    "pk": 1,
+    "fields": {
+      "name": "PebblePay Mini Charging Dock",
+      "slug": "pebblepay-mini-charging-dock",
+      "description": "Official charging dock for PebblePay Mini devices",
+      "category": 1,
+      "price": "29.99",
+      "cost_price": "15.00",
+      "sku": "PP-CHG-001",
+      "barcode": "123456789012",
+      "stock_quantity": 50,
+      "min_stock_level": 10,
+      "max_stock_level": 100,
+      "is_active": true,
+      "weight": 250,
+      "dimensions": {
+        "length": 15,
+        "width": 10,
+        "height": 5
+      },
+      "created_at": "2025-09-23T12:00:00Z",
+      "updated_at": "2025-09-23T12:00:00Z"
+    }
+  },
+  {
+    "model": "inventory.product",
+    "pk": 2,
+    "fields": {
+      "name": "Thermal Receipt Paper (5 Rolls)",
+      "slug": "thermal-receipt-paper-5-rolls",
+      "description": "High-quality thermal paper for PebblePay receipt printers",
+      "category": 1,
+      "price": "12.99",
+      "cost_price": "5.50",
+      "sku": "PP-PAPER-001",
+      "barcode": "123456789013",
+      "stock_quantity": 100,
+      "min_stock_level": 20,
+      "max_stock_level": 200,
+      "is_active": true,
+      "weight": 500,
+      "dimensions": {
+        "length": 20,
+        "width": 20,
+        "height": 10
+      },
+      "created_at": "2025-09-23T12:00:00Z",
+      "updated_at": "2025-09-23T12:00:00Z"
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 1,
+    "fields": {
+      "name": "Sales",
+      "description": "Sales and customer relations department"
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 2,
+    "fields": {
+      "name": "Support",
+      "description": "Customer support and technical assistance"
+    }
+  },
+  {
+    "model": "analytics.salesmetric",
+    "pk": 1,
+    "fields": {
+      "date": "2025-09-22",
+      "total_sales": "1250.50",
+      "total_orders": 15,
+      "total_customers": 12,
+      "average_order_value": "83.37",
+      "top_product": "PebblePay Mini"
+    }
+  },
+  {
+    "model": "analytics.salesmetric",
+    "pk": 2,
+    "fields": {
+      "date": "2025-09-23",
+      "total_sales": "1875.25",
+      "total_orders": 22,
+      "total_customers": 18,
+      "average_order_value": "85.24",
+      "top_product": "PebblePay Flex"
+    }
+  }
+]
